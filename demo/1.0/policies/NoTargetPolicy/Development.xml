@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assignVariableConfiguration policyName="ASSIGN_VARIABLE" policyType="TRANSFORMATION">
+    <policyInstanceName>NoTargetPolicy</policyInstanceName>
+    <params>
+        <entry>
+            <key>target.id</key>
+            <value>
+                <constantVariableConfiguration>
+                    <value>FIORANO_NO_TARGET</value>
+                    <variableNamePrefix>%</variableNamePrefix>
+                    <variableNameSuffix>%</variableNameSuffix>
+                    <variablesInUse>false</variablesInUse>
+                </constantVariableConfiguration>
+                <ignoreCase>true</ignoreCase>
+                <ignoreIfNotExists>false</ignoreIfNotExists>
+                <namespaces/>
+                <pattern></pattern>
+                <source>CONSTANT</source>
+                <XMLPayload>false</XMLPayload>
+            </value>
+        </entry>
+    </params>
+</assignVariableConfiguration>

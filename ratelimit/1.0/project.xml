@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<apiProjectConfiguration>
+    <properties/>
+    <resources>
+        <entry>
+            <key>DefaultResource</key>
+            <value>
+                <Policies/>
+                <allowChildPaths>false</allowChildPaths>
+                <dummyPolicyConfigurationsForJson/>
+                <endpoints>
+                    <entry>
+                        <key>DefaultTarget</key>
+                        <value>1</value>
+                    </entry>
+                </endpoints>
+                <forwardBasePath>false</forwardBasePath>
+                <loadBalancingStrategy>ROUND_ROBIN</loadBalancingStrategy>
+                <resourceID>DefaultResource</resourceID>
+                <streamingScope>NONE</streamingScope>
+                <targetRules>
+                    <Entry>
+                        <Key>NoRule</Key>
+                        <Value>DefaultTarget</Value>
+                    </Entry>
+                </targetRules>
+                <wafEnabled>false</wafEnabled>
+                <wafFilterClassName>org.owasp.esapi.waf.ESAPIWebApplicationFirewallFilter</wafFilterClassName>
+                <wafFilterConfig/>
+            </value>
+        </entry>
+    </resources>
+    <policyIDs>
+        <entry>
+            <key>apikey</key>
+            <value>VERIFY_API_KEY</value>
+        </entry>
+        <entry>
+            <key>ratelimit</key>
+            <value>RATE_LIMITING</value>
+        </entry>
+    </policyIDs>
+    <ProjectPolicies>
+        <Entry>
+            <PolicyScope>PROXY_REQUEST</PolicyScope>
+            <PolicyID>apikey</PolicyID>
+        </Entry>
+        <Entry>
+            <PolicyScope>PROXY_REQUEST</PolicyScope>
+            <PolicyID>ratelimit</PolicyID>
+        </Entry>
+    </ProjectPolicies>
+    <dummyProjectPoliciesForJSON>
+        <entry>
+            <key>PROXY_REQUEST</key>
+            <value/>
+        </entry>
+    </dummyProjectPoliciesForJSON>
+    <creationDate>2026/03/27 11:23:36</creationDate>
+    <includeVersionInPath>false</includeVersionInPath>
+    <lastModified>2026/06/05 15:59:09</lastModified>
+    <projectDocument>
+        <basePath>/ratelimiting</basePath>
+        <resourceDocs>
+            <entry>
+                <key>DefaultResource</key>
+                <value>
+                    <customParams>
+                        <entry>
+                            <key>apikey</key>
+                            <value>
+<defaultValue>ABBDfRbnozvTqVvEQkbEEClC</defaultValue>
+<description>Parameter which holds the key that needs to be verified.</description>
+<name>apikey</name>
+<required>true</required>
+<type>Header</type>
+                            </value>
+                        </entry>
+                    </customParams>
+                    <method>POST</method>
+                    <parameters/>
+                    <path>/</path>
+                    <requestBody>
+                        <defaultValue>Default value</defaultValue>
+                        <description>Request Body</description>
+                        <name>Request Body</name>
+                        <required>false</required>
+                        <type>body</type>
+                    </requestBody>
+                </value>
+            </entry>
+        </resourceDocs>
+        <status>ACTIVE</status>
+        <version>1.0</version>
+    </projectDocument>
+    <projectID>ratelimit</projectID>
+    <projectName></projectName>
+    <projectVersion>1.0</projectVersion>
+    <proxyAsEndPoint>false</proxyAsEndPoint>
+    <referredPolicies/>
+    <releaseVersion>3.0</releaseVersion>
+    <routingRules>
+        <entry>
+            <key>
+                <Rule>CONTEXT_VARIABLE[proxy.request.method]~EQUALS~POST</Rule>
+            </key>
+            <value>DefaultResource</value>
+        </entry>
+    </routingRules>
+    <rule>
+        <Rule>CONTEXT_VARIABLE[api.project.context.path]~EQUALS~/ratelimiting and CONTEXT_VARIABLE[api.project.version]~EQUALS~1.0</Rule>
+    </rule>
+    <status>ACTIVE</status>
+    <traceEnabled>false</traceEnabled>
+    <user>admin</user>
+</apiProjectConfiguration>

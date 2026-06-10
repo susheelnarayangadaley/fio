@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tokenEndPointConfiguration policyName="OAUTH_TOKEN_END" policyType="SECURITY">
+    <policyInstanceName>TokenEndPointPolicy</policyInstanceName>
+    <attributes/>
+    <authenticated>true</authenticated>
+    <enablePKCE>false</enablePKCE>
+    <expiresIn>600000</expiresIn>
+    <refreshTokenExpiresIn>600000</refreshTokenExpiresIn>
+    <refreshUnits>SECONDS</refreshUnits>
+    <units>SECONDS</units>
+</tokenEndPointConfiguration>

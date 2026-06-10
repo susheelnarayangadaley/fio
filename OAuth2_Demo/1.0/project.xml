@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<apiProjectConfiguration>
+    <properties/>
+    <resources>
+        <entry>
+            <key>DefaultResource</key>
+            <value>
+                <Policies>
+                    <Entry>
+                        <PolicyScope>PROXY_REQUEST</PolicyScope>
+                        <PolicyID>TokenEndPointPolicy</PolicyID>
+                    </Entry>
+                </Policies>
+                <allowChildPaths>false</allowChildPaths>
+                <dummyPolicyConfigurationsForJson>
+                    <entry>
+                        <key>PROXY_REQUEST</key>
+                        <value/>
+                    </entry>
+                </dummyPolicyConfigurationsForJson>
+                <endpoints/>
+                <forwardBasePath>false</forwardBasePath>
+                <loadBalancingStrategy>ROUND_ROBIN</loadBalancingStrategy>
+                <resourceID>DefaultResource</resourceID>
+                <streamingScope>NONE</streamingScope>
+                <targetRules>
+                    <Entry>
+                        <Key>NoRule</Key>
+                        <Value>DefaultTarget</Value>
+                    </Entry>
+                </targetRules>
+                <wafEnabled>false</wafEnabled>
+                <wafFilterClassName>org.owasp.esapi.waf.ESAPIWebApplicationFirewallFilter</wafFilterClassName>
+                <wafFilterConfig/>
+            </value>
+        </entry>
+    </resources>
+    <policyIDs>
+        <entry>
+            <key>TokenEndPointPolicy</key>
+            <value>OAUTH_TOKEN_END</value>
+        </entry>
+    </policyIDs>
+    <ProjectPolicies/>
+    <dummyProjectPoliciesForJSON/>
+    <creationDate>2026/06/05 14:32:39</creationDate>
+    <includeVersionInPath>true</includeVersionInPath>
+    <lastModified>2026/06/05 15:29:24</lastModified>
+    <projectDocument>
+        <basePath>/OAuthGenerateToken/1.0</basePath>
+        <resourceDocs>
+            <entry>
+                <key>DefaultResource</key>
+                <value>
+                    <customParams/>
+                    <method>POST</method>
+                    <parameters/>
+                    <path>/</path>
+                    <requestBody>
+                        <defaultValue>Default value</defaultValue>
+                        <description>Request Body</description>
+                        <name>Request Body</name>
+                        <required>false</required>
+                        <type>body</type>
+                    </requestBody>
+                </value>
+            </entry>
+        </resourceDocs>
+        <status>ACTIVE</status>
+        <version>1.0</version>
+    </projectDocument>
+    <projectID>OAuth2_Demo</projectID>
+    <projectName></projectName>
+    <projectVersion>1.0</projectVersion>
+    <proxyAsEndPoint>false</proxyAsEndPoint>
+    <referredPolicies/>
+    <releaseVersion>3.0</releaseVersion>
+    <routingRules>
+        <entry>
+            <key>
+                <Rule>CONTEXT_VARIABLE[proxy.request.method]~EQUALS~POST</Rule>
+            </key>
+            <value>DefaultResource</value>
+        </entry>
+    </routingRules>
+    <rule>
+        <Rule>CONTEXT_VARIABLE[api.project.context.path]~EQUALS~/OAuthGenerateToken and CONTEXT_VARIABLE[api.project.version]~EQUALS~1.0</Rule>
+    </rule>
+    <status>ACTIVE</status>
+    <traceEnabled>false</traceEnabled>
+    <user>admin</user>
+</apiProjectConfiguration>

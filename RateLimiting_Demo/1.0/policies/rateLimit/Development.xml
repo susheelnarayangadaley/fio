@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rateLimitingConfiguration policyName="RATE_LIMITING" policyType="TRAFFIC">
+    <policyInstanceName>rateLimit</policyInstanceName>
+    <cacheMapSize>50</cacheMapSize>
+    <fixedInterval>60000</fixedInterval>
+    <IPList>192.168.2.137</IPList>
+    <monitoringParameter>IP</monitoringParameter>
+    <performAction>BLOCK</performAction>
+    <ratePerInterval>1</ratePerInterval>
+</rateLimitingConfiguration>
